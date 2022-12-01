@@ -1,0 +1,3 @@
+https://www.digitalocean.com/community/tutorials/how-to-work-with-zip-files-in-node-js
+
+https://javascript.plainenglish.io/how-to-create-zip-files-with-node-js-505e720ceee1
