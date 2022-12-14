@@ -28,12 +28,6 @@
 //     console.log(err)
 // })
 
-// promise.then(data => {
-//     console.log(data)
-//   })
-//   .catch(err => {
-//     console.log(err)
-//   })
 
 /////////modify previous code like this following the example!!!!!!!
 
@@ -53,6 +47,8 @@ function getSumNum(a,b) {
      return customPromise
 }
 
+
+
 getSumNum(1,3)
 .then(data => {                                         // executed when the promise is fulfilled by the resolve() callback
     console.log("initial data " + data)                // the .then here shows the initial data,then modifies the data by adding 1 and 
@@ -71,3 +67,4 @@ getSumNum(1,3)
 //output initial data 4
 //      modified data 5
  
+

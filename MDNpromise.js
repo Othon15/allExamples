@@ -1,3 +1,25 @@
+// const promiseA = new Promise((resolve, reject) => {
+//     resolve(777);
+//   });
+//   // At this point, "promiseA" is already settled.
+//   promiseA.then((val) => console.log("asynchronous logging has val:", val));
+//   console.log("immediate logging");
+  
+
+
+//   const aThenable = {
+//     then(onFulfilled, onRejected) {
+//       onFulfilled({
+//         // The thenable is fulfilled with another thenable
+//         then(onFulfilled, onRejected) {
+//           onFulfilled(42);
+//         },
+//       });
+//     },
+//   };
+  
+//   Promise.resolve(aThenable); // A promise fulfilled with 42
+  
 
 //Basic example
 
@@ -11,7 +33,7 @@
 // });
 
 
-const THRESHOLD_A = 8 //can use zero 0 to guarantee error
+const THRESHOLD_A = 6 //can use zero 0 to guarantee error
 
 function tetheredGetNumber (resolve,reject) {
     setTimeout(() => {
