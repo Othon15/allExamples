@@ -1,10 +1,9 @@
 // const promiseA = new Promise((resolve, reject) => {
-//     resolve(777);
+//     resolve(77);
 //   });
 //   // At this point, "promiseA" is already settled.
 //   promiseA.then((val) => console.log("asynchronous logging has val:", val));
 //   console.log("immediate logging");
-  
 
 
 //   const aThenable = {
@@ -33,56 +32,56 @@
 // });
 
 
-const THRESHOLD_A = 6 //can use zero 0 to guarantee error
+// const THRESHOLD_A = 6 //can use zero 0 to guarantee error
 
-function tetheredGetNumber (resolve,reject) {
-    setTimeout(() => {
-        const randomInt = Date.now () ;
-        const value = randomInt % 10 ;
-        if (value < THRESHOLD_A){
-            resolve(value);
-        }else {
-            reject (`Too large ${value}`);
-        }
-    },500);
-}
+// function tetheredGetNumber (resolve,reject) {
+//     setTimeout(() => {
+//         const randomInt = Date.now () ;
+//         const value = randomInt % 10 ;
+//         if (value < THRESHOLD_A){
+//             resolve(value);
+//         }else {
+//             reject (`Too large ${value}`);
+//         }
+//     },500);
+// }
 
 
-function determineParity(value) {
-    const isOdd = value % 2 === 1;
-    return { value , isOdd};
-}
+// function determineParity(value) {
+//     const isOdd = value % 2 === 1;
+//     return { value , isOdd};
+// }
 
-function troubleWithGetNumber(reason){
-    const err = new Error ("Trouble getting number", {cause : reason});
-    console.log(err);
-    throw  err ;
-}
+// function troubleWithGetNumber(reason){
+//     const err = new Error ("Trouble getting number", {cause : reason});
+//     console.log(err);
+//     throw  err ;
+// }
 
-function promiseGetWorld(parityInfo) {
-    return new Promise ((resolve,reject) => {
-        const {value ,isOdd} = parityInfo;
-        if (value >= THRESHOLD_A -1) {
-            reject (`Still too large ${value}`);
-        } else {
-            parityInfo.wordEvenOdd = isOdd ? "odd" : "even"
-            resolve(parityInfo);
-        }
-    });
-}
+// function promiseGetWorld(parityInfo) {
+//     return new Promise ((resolve,reject) => {
+//         const {value ,isOdd} = parityInfo;
+//         if (value >= THRESHOLD_A -1) {
+//             reject (`Still too large ${value}`);
+//         } else {
+//             parityInfo.wordEvenOdd = isOdd ? "odd" : "even"
+//             resolve(parityInfo);
+//         }
+//     });
+// }
 
-new Promise (tetheredGetNumber)
-.then(determineParity,troubleWithGetNumber)
-.then(promiseGetWorld)
-.then((info) => {
-    console.log(`Got : ${info.value},${info.wordEvenOdd}`);
-    return info ;
-})
-.catch((reason) =>{
-    if(reason.cause) {
-        console.error("Had previously handled error");
-    }else {
-        console.error(`TRouble with promiseGetWord(): ${reason}`);
-    }
-})
-.finally((info)=> console.log("All done"));
+// new Promise (tetheredGetNumber)
+// .then(determineParity,troubleWithGetNumber)
+// .then(promiseGetWorld)
+// .then((info) => {
+//     console.log(`Got : ${info.value},${info.wordEvenOdd}`);
+//     return info ;
+// })
+// .catch((reason) =>{
+//     if(reason.cause) {
+//         console.error("Had previously handled error");
+//     }else {
+//         console.error(`TRouble with promiseGetWord(): ${reason}`);
+//     }
+// })
+// .finally((info)=> console.log("All done"));

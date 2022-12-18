@@ -69,7 +69,7 @@
  
 /////////////////////////promise chaining article from Peter 15/12/2022   https://javascript.info/promise-chaining
 
-//EXAMPLE 1
+// EXAMPLE 1
 
 // new Promise (function (resolve, reject) {
 //     setTimeout (() => resolve(1),1000); // (*)
@@ -136,4 +136,38 @@
 //     console.log(result);   // 4
 
 // });
+
+//////////////////////////////blog rocket///////////////////////////////////
+
+// function perfectSquare (number, callback) {
+//     const bool = Number.isInteger(Math.sqrt(number))
+//     if (!bool) {
+//       return callback(`Number ${number} is NOT a perfect square` )
+//     }
+//     callback(`Number ${number} is a perfect square`)
+//   }
+
+//   // callback function
+//   function callback(data){
+//     console.log(data)
+//   }
+
+
+//   perfectSquare(25, callback)       
+
+
+// function perfectSquare(number){
+//     return new Promise(function(fulfilled,rejected){
+//         const bool = Number.isInteger(Math.sqrt(number))
+//     if (!bool){
+//         return rejected(new Error(`Number ${number} is NOT a perfect square`))
+//     }
+//     fulfilled(`Number ${number} is a perfect square`)
+//     })
+// }
+
+
+// perfectSquare(25).then(res => {
+//     console.log(res)
+// }) 
 
