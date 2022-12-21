@@ -32,7 +32,9 @@
 // });
 
 
-// const THRESHOLD_A = 6 //can use zero 0 to guarantee error
+//  const THRESHOLD_A = 8 //can use zero 0 to guarantee error
+
+
 
 // function tetheredGetNumber (resolve,reject) {
 //     setTimeout(() => {
@@ -85,3 +87,18 @@
 //     }
 // })
 // .finally((info)=> console.log("All done"));
+
+////////////////////////Using Promises///////////////////
+
+// function successCallback(result) {
+//     console.log(`Audio file ready at URL: ${result}`);
+//   }
+  
+//   function failureCallback(error) {
+//     console.error(`Error generating audio file: ${error}`);
+//   }
+  
+//  createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
+
+
+//  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises

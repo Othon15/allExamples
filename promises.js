@@ -1,7 +1,7 @@
-//jshint esversion:6
+// //jshint esversion:6
 
 
-//https://blog.logrocket.com/guide-promises-node-js/
+// //https://blog.logrocket.com/guide-promises-node-js/
 
 // function getSumNum (a, b) {
 //     const customPromise = new Promise( (resolve,reject) =>{                                            
@@ -64,8 +64,8 @@
 //     console.log(err)
 // })  
 
-// //output initial data 4
-// //      modified data 5
+//output initial data 4
+//      modified data 5
  
 /////////////////////////promise chaining article from Peter 15/12/2022   https://javascript.info/promise-chaining
 
