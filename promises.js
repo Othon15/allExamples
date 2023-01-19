@@ -1,4 +1,4 @@
-// //jshint esversion:6
+//jshint esversion:6
 
 
 // //https://blog.logrocket.com/guide-promises-node-js/
